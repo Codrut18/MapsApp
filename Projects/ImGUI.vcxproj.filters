@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{596b38ac-9fba-40a2-a756-e0903354387e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{62a00ad8-0539-4c68-910d-b052d93fcedc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\backends">
+      <UniqueIdentifier>{bc539bff-7754-45ce-80fc-dc96be24a402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\backends">
+      <UniqueIdentifier>{c132222e-5e68-4fdd-987d-17191ed404bd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rdParty\ImGUI\imconfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ImGUI\imgui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ImGUI\imgui_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ImGUI\imstb_rectpack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ImGUI\imstb_textedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ImGUI\imstb_truetype.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ImGUI\backends\imgui_impl_opengl3.h">
+      <Filter>Header Files\backends</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\ImGUI\backends\imgui_impl_sdl.h">
+      <Filter>Header Files\backends</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\3rdParty\ImGUI\imgui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ImGUI\imgui_draw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ImGUI\imgui_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ImGUI\imgui_widgets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ImGUI\imgui_demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ImGUI\backends\imgui_impl_opengl3.cpp">
+      <Filter>Source Files\backends</Filter>
+    </ClCompile>
+    <ClCompile Include="..\3rdParty\ImGUI\backends\imgui_impl_sdl.cpp">
+      <Filter>Source Files\backends</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

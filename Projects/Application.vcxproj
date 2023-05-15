@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1f832837-89b6-4e67-9dec-27c49f2d0c9f}</ProjectGuid>
+    <RootNamespace>Application</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\BUILD_WIN\$(SolutionName)\Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD_WIN\$(SolutionName)\Obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\BUILD_WIN\$(SolutionName)\Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD_WIN\$(SolutionName)\Obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\BUILD_WIN\$(SolutionName)\Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD_WIN\$(SolutionName)\Obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\BUILD_WIN\$(SolutionName)\Bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\BUILD_WIN\$(SolutionName)\Obj\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>IMGUI_IMPL_OPENGL_ES2;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../3rdParty/SDL2/include;../3rdParty/ImGUI;../SDK/Include;../SDK/3rdParty/ANGLE/Include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\BUILD_WIN\$(SolutionName)\Lib\$(Platform)\$(Configuration);..\SDK\Lib\;..\SDK\3rdParty\ANGLE\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;ImGUI.lib;libEGL.dll.lib;libGLESv2.dll.lib;Setupapi.lib;Ws2_32.lib;Version.lib;Psapi.lib;Rpcrt4.lib;Usp10.lib;Shlwapi.lib;imm32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;GEMStatic_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>IMGUI_IMPL_OPENGL_ES2;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../3rdParty/SDL2/include;../3rdParty/ImGUI;../SDK/Include;../SDK/3rdParty/ANGLE/Include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\BUILD_WIN\$(SolutionName)\Lib\$(Platform)\$(Configuration);..\SDK\Lib\;..\SDK\3rdParty\ANGLE\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;ImGUI.lib;libEGL.dll.lib;libGLESv2.dll.lib;Setupapi.lib;Ws2_32.lib;Version.lib;Psapi.lib;Rpcrt4.lib;Usp10.lib;Shlwapi.lib;imm32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;GEMStatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>IMGUI_IMPL_OPENGL_ES2;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../3rdParty/SDL2/include;../3rdParty/ImGUI;../SDK/Include;../SDK/3rdParty/ANGLE/Include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\BUILD_WIN\$(SolutionName)\Lib\$(Platform)\$(Configuration);..\SDK\Lib\;..\SDK\3rdParty\ANGLE\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;ImGUI.lib;libEGL.dll.lib;libGLESv2.dll.lib;Setupapi.lib;Ws2_32.lib;Version.lib;Psapi.lib;Rpcrt4.lib;Usp10.lib;Shlwapi.lib;imm32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;GEMStatic_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /D /Q /Y "..\SDK\3rdParty\ANGLE\bin\$(Platform)\*.dll" "$(OutDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>IMGUI_IMPL_OPENGL_ES2;_SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../3rdParty/SDL2/include;../3rdParty/ImGUI;../SDK/Include;../SDK/3rdParty/ANGLE/Include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\BUILD_WIN\$(SolutionName)\Lib\$(Platform)\$(Configuration);..\SDK\Lib\;..\SDK\3rdParty\ANGLE\lib\x64\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;ImGUI.lib;libEGL.dll.lib;libGLESv2.dll.lib;Setupapi.lib;Ws2_32.lib;Version.lib;Psapi.lib;Rpcrt4.lib;Usp10.lib;Shlwapi.lib;imm32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;GEMStatic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\Application\ActiveFingersCollection.cpp" />
+    <ClCompile Include="..\Src\Application\BaseImGuiWindow.cpp" />
+    <ClCompile Include="..\Src\Application\BaseSdlWindow.cpp" />
+    <ClCompile Include="..\Src\Application\BaseView.cpp" />
+    <ClCompile Include="..\Src\Application\BitmapImpl.cpp" />
+    <ClCompile Include="..\Src\Application\MapsView.cpp" />
+    <ClCompile Include="..\Src\Application\MapsViewModel.cpp" />
+    <ClCompile Include="..\Src\Application\MapView.cpp" />
+    <ClCompile Include="..\Src\Application\MagicLaneMapService.cpp" />
+    <ClCompile Include="..\Src\Application\NavigationService.cpp" />
+    <ClCompile Include="..\Src\Application\NavigationView.cpp" />
+    <ClCompile Include="..\Src\Application\NavigationViewModel.cpp" />
+    <ClCompile Include="..\Src\Application\OpenGLContextImpl.cpp" />
+    <ClCompile Include="..\Src\Application\ResourceRepository.cpp" />
+    <ClCompile Include="..\Src\Application\RoutesView.cpp" />
+    <ClCompile Include="..\Src\Application\RoutesViewModel.cpp" />
+    <ClCompile Include="..\Src\Application\SDKUtils.cpp" />
+    <ClCompile Include="..\Src\Application\TextureRepository.cpp" />
+    <ClCompile Include="..\Src\Application\TimerServiceImpl.cpp" />
+    <ClCompile Include="..\Src\Application\BaseViewModel.cpp" />
+    <ClCompile Include="..\Src\Application\main.cpp" />
+    <ClCompile Include="..\Src\Application\MainUi.cpp" />
+    <ClCompile Include="..\Src\Application\MainView.cpp" />
+    <ClCompile Include="..\Src\Application\MainViewModel.cpp" />
+    <ClCompile Include="..\Src\Application\PreferencesView.cpp" />
+    <ClCompile Include="..\Src\Application\PreferencesViewModel.cpp" />
+    <ClCompile Include="..\Src\Application\robotofont.cpp" />
+    <ClCompile Include="..\Src\Application\ViewFactory.cpp" />
+    <ClCompile Include="..\Src\Application\ViewModelFactory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Src\Application\ActiveFingersCollection.h" />
+    <ClInclude Include="..\Src\Application\ApiCallLoggerImpl.h" />
+    <ClInclude Include="..\Src\Application\BaseImGuiWindow.h" />
+    <ClInclude Include="..\Src\Application\BaseSdlWindow.h" />
+    <ClInclude Include="..\Src\Application\BaseView.h" />
+    <ClInclude Include="..\Src\Application\BitmapImpl.h" />
+    <ClInclude Include="..\Src\Application\ContentUpdateListener.h" />
+    <ClInclude Include="..\Src\Application\Entities.h" />
+    <ClInclude Include="..\Src\Application\IMapView.h" />
+    <ClInclude Include="..\Src\Application\IMapService.h" />
+    <ClInclude Include="..\Src\Application\IMapServiceListener.h" />
+    <ClInclude Include="..\Src\Application\INavigationService.h" />
+    <ClInclude Include="..\Src\Application\IOpenGLContext.h" />
+    <ClInclude Include="..\Src\Application\IMainWindow.h" />
+    <ClInclude Include="..\Src\Application\IResourceRepository.h" />
+    <ClInclude Include="..\Src\Application\ITextureRepository.h" />
+    <ClInclude Include="..\Src\Application\IViewFactory.h" />
+    <ClInclude Include="..\Src\Application\IViewModel.h" />
+    <ClInclude Include="..\Src\Application\IViewModelFactory.h" />
+    <ClInclude Include="..\Src\Application\IViewModelListener.h" />
+    <ClInclude Include="..\Src\Application\MapsView.h" />
+    <ClInclude Include="..\Src\Application\MapsViewModel.h" />
+    <ClInclude Include="..\Src\Application\MapView.h" />
+    <ClInclude Include="..\Src\Application\MagicLaneMapService.h" />
+    <ClInclude Include="..\Src\Application\NavigationService.h" />
+    <ClInclude Include="..\Src\Application\NavigationView.h" />
+    <ClInclude Include="..\Src\Application\NavigationViewModel.h" />
+    <ClInclude Include="..\Src\Application\OpenGLContextImpl.h" />
+    <ClInclude Include="..\Src\Application\ProgressListenerImpl.h" />
+    <ClInclude Include="..\Src\Application\ResourceRepository.h" />
+    <ClInclude Include="..\Src\Application\RoutesView.h" />
+    <ClInclude Include="..\Src\Application\RoutesViewModel.h" />
+    <ClInclude Include="..\Src\Application\SDKUtils.h" />
+    <ClInclude Include="..\Src\Application\TextureRepository.h" />
+    <ClInclude Include="..\Src\Application\TimerServiceImpl.h" />
+    <ClInclude Include="..\Src\Application\BaseViewModel.h" />
+    <ClInclude Include="..\Src\Application\EView.h" />
+    <ClInclude Include="..\Src\Application\IMainUi.h" />
+    <ClInclude Include="..\Src\Application\IView.h" />
+    <ClInclude Include="..\Src\Application\MainUi.h" />
+    <ClInclude Include="..\Src\Application\MainView.h" />
+    <ClInclude Include="..\Src\Application\MainViewModel.h" />
+    <ClInclude Include="..\Src\Application\PreferencesView.h" />
+    <ClInclude Include="..\Src\Application\PreferencesViewModel.h" />
+    <ClInclude Include="..\Src\Application\ViewFactory.h" />
+    <ClInclude Include="..\Src\Application\ViewModelFactory.h" />
+    <ClInclude Include="..\Src\Application\WindowInfo.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

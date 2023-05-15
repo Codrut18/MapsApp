@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers">
+      <UniqueIdentifier>{57b33fe4-2d9d-4d63-9d85-3aba5f62c5b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers\UI">
+      <UniqueIdentifier>{e8826a81-7305-4519-8171-a62ce6900d55}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers">
+      <UniqueIdentifier>{c97e0f03-9b41-4df1-ab62-358e448b525c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers\UI">
+      <UniqueIdentifier>{907ebebd-2bd9-4e16-ba8a-2d6cddcfaa01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InterfaceAdapters">
+      <UniqueIdentifier>{eec38432-c95a-4068-986f-202f2042c143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InterfaceAdapters\Presentation">
+      <UniqueIdentifier>{d22f26e6-3a41-467c-8629-cf8779736dbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InterfaceAdapters\Presentation\Mvvm">
+      <UniqueIdentifier>{9118d04e-14b6-4313-92c1-4e06f1665516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InterfaceAdapters">
+      <UniqueIdentifier>{96ea2b20-957b-48e6-9ef3-8765ab0620b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InterfaceAdapters\Presentation">
+      <UniqueIdentifier>{9ba4d8c1-ecef-49fc-bde3-10ed8f900be3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InterfaceAdapters\Presentation\Mvvm">
+      <UniqueIdentifier>{77ea1925-f11d-4f82-ba10-df555baceb95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Utils">
+      <UniqueIdentifier>{8c1ec0d2-e65d-45e3-98a5-598af34d9530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utils">
+      <UniqueIdentifier>{f685d7d7-87fa-4bde-8e6b-8c7fb24f5a30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers\Model">
+      <UniqueIdentifier>{fea96206-4a1b-4ff6-8136-1b1362b43010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers\Model">
+      <UniqueIdentifier>{a7e4964d-b6d3-41d5-8ef5-2e85ed69fd20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers\Model\MapView">
+      <UniqueIdentifier>{5aa9e8c3-f134-40ea-87d9-a7819afa9691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers\Model\Resource">
+      <UniqueIdentifier>{07fda682-1f70-425e-a72d-fae737dc17f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers\Model\SDKUtils">
+      <UniqueIdentifier>{ac64a0ec-1b5b-43c6-8442-d9cff7fc2320}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers\Model\Texture">
+      <UniqueIdentifier>{e0079097-773b-4f4d-9696-9259c61eb883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers\Model\MapView">
+      <UniqueIdentifier>{f200c562-e773-4417-96bc-f37367bcba4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers\Model\Resource">
+      <UniqueIdentifier>{fa3dcf2b-37a6-4763-9a5e-6770751a4fed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers\Model\SDKUtils">
+      <UniqueIdentifier>{e667a43b-2c22-46e0-bcde-4db653999cb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers\Model\Texture">
+      <UniqueIdentifier>{68484eca-985f-4bff-b22a-d36e1c046902}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InterfaceAdapters\Interfaces">
+      <UniqueIdentifier>{1e914c02-7d4a-4adc-851c-2d1ed9ba185b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entities">
+      <UniqueIdentifier>{f9cb4ca2-67a5-4add-9c45-a681f5752363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers\UI\ViewsImpl">
+      <UniqueIdentifier>{0bed7f02-4966-44ff-a162-3021e9bf1416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InterfaceAdapters\Presentation\Mvvm\Factories">
+      <UniqueIdentifier>{3cc9aa49-a2ce-4685-b46a-6a43fa86dd83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels">
+      <UniqueIdentifier>{caf7cfa6-83ea-4fcb-81b6-8a416e9fd1e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InterfaceAdapters\Presentation\Mvvm\Views">
+      <UniqueIdentifier>{3b37e553-9a6a-4191-a08d-e730f02edef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl">
+      <UniqueIdentifier>{4ec51fd0-ee36-4706-bab2-8498e86d07f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers\UI\SDL">
+      <UniqueIdentifier>{c5a6432e-f96f-406b-af00-cf8e84047208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\FrameworksAndDrivers\UI\ImGui">
+      <UniqueIdentifier>{01b2bdc1-cc3e-4d2d-a7b2-3cb405309b35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers\UI\SDL">
+      <UniqueIdentifier>{0c24b98f-3c11-4466-82e0-c2238e286e49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers\UI\ImGui">
+      <UniqueIdentifier>{39a1aa6a-c02a-4e5f-82cf-a421c7dc77b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InterfaceAdapters\Presentation\Mvvm\Factories">
+      <UniqueIdentifier>{b4d3a5bc-bbb9-43ca-8f9f-663e79f27bfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InterfaceAdapters\Presentation\Mvvm\ViewModels">
+      <UniqueIdentifier>{55af742e-06ac-48f6-8487-cb9550c1b79f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl">
+      <UniqueIdentifier>{6c05bec6-9841-4361-83af-abbddc950ccc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FrameworksAndDrivers\UI\ViewsImpl">
+      <UniqueIdentifier>{b1e11b37-433c-471e-9bee-d3bb6affe56e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\Application\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\MainUi.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\MagicLaneMapService.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\MapView.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\Model\MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\OpenGLContextImpl.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\Model\MapView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\BitmapImpl.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\Model\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\TextureRepository.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\Model\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\SDKUtils.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\Model\SDKUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\TimerServiceImpl.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\Model\SDKUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\ResourceRepository.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\Model\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\ViewModelFactory.cpp">
+      <Filter>Source Files\InterfaceAdapters\Presentation\Mvvm\Factories</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\NavigationService.cpp">
+      <Filter>Source Files\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\BaseImGuiWindow.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\ActiveFingersCollection.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\BaseSdlWindow.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\SDL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\MainViewModel.cpp">
+      <Filter>Source Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\PreferencesViewModel.cpp">
+      <Filter>Source Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\BaseViewModel.cpp">
+      <Filter>Source Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\MainView.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\PreferencesView.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\BaseView.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\robotofont.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\ViewFactory.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\MapsView.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\MapsViewModel.cpp">
+      <Filter>Source Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\RoutesView.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\RoutesViewModel.cpp">
+      <Filter>Source Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\NavigationViewModel.cpp">
+      <Filter>Source Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\NavigationView.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Src\Application\MainUi.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\MagicLaneMapService.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IOpenGLContext.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\OpenGLContextImpl.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\MapView.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\MapView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\ContentUpdateListener.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\ProgressListenerImpl.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\ResourceRepository.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\ApiCallLoggerImpl.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\SDKUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\SDKUtils.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\SDKUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\TimerServiceImpl.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\SDKUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\BitmapImpl.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\TextureRepository.h">
+      <Filter>Header Files\FrameworksAndDrivers\Model\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IMapView.h">
+      <Filter>Header Files\InterfaceAdapters\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IMapService.h">
+      <Filter>Header Files\InterfaceAdapters\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IMapServiceListener.h">
+      <Filter>Header Files\InterfaceAdapters\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IResourceRepository.h">
+      <Filter>Header Files\InterfaceAdapters\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\ITextureRepository.h">
+      <Filter>Header Files\InterfaceAdapters\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\Entities.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\NavigationService.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\INavigationService.h">
+      <Filter>Header Files\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\WindowInfo.h">
+      <Filter>Header Files\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\BaseView.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\MainView.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\PreferencesView.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IMainWindow.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IView.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\EView.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IMainUi.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\Views</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IViewModel.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IViewModelListener.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IViewFactory.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\IViewModelFactory.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\ViewModelFactory.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\Factories</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\PreferencesViewModel.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\MainViewModel.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\BaseViewModel.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\BaseSdlWindow.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\BaseImGuiWindow.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\ActiveFingersCollection.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\SDL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\ViewFactory.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\MapsView.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\MapsViewModel.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\RoutesView.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\RoutesViewModel.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\NavigationViewModel.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\NavigationView.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
