@@ -7,6 +7,7 @@
 #include "ITextureRepository.h"
 
 #include <API/GEM_ContentStoreItem.h>
+#include <string>
 
 StyleView::StyleView(IMainWindow* parent)
     : BaseView(parent)
@@ -26,7 +27,7 @@ void StyleView::SetViewModel(IViewModel* viewModel)
     m_viewModel = static_cast<StyleViewModel*>(viewModel);
 }
 
-static gem::String FormatFileSize(gem::LargeInteger sz)
+static std::string FormatFileSize(gem::LargeInteger sz)
 {
     if (sz < 1024 * 1024)
         return gem::String::formatString(u"%.2lf KB", sz / 1024.);
