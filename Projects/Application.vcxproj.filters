@@ -213,6 +213,12 @@
     <ClCompile Include="..\Src\Application\NavigationView.cpp">
       <Filter>Source Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
     </ClCompile>
+    <ClCompile Include="..\Src\Application\StyleView.cpp">
+      <Filter>Source Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Application\StyleViewModel.cpp">
+      <Filter>Source Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Src\Application\MainUi.h">
@@ -355,6 +361,12 @@
     </ClInclude>
     <ClInclude Include="..\Src\Application\NavigationView.h">
       <Filter>Header Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\StyleView.h">
+      <Filter>Header Files\FrameworksAndDrivers\UI\ViewsImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Application\StyleViewModel.h">
+      <Filter>Header Files\InterfaceAdapters\Presentation\Mvvm\ViewModels\ViewModelsImpl</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

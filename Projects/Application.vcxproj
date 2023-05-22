@@ -183,6 +183,8 @@
     <ClCompile Include="..\Src\Application\RoutesView.cpp" />
     <ClCompile Include="..\Src\Application\RoutesViewModel.cpp" />
     <ClCompile Include="..\Src\Application\SDKUtils.cpp" />
+    <ClCompile Include="..\Src\Application\StyleView.cpp" />
+    <ClCompile Include="..\Src\Application\StyleViewModel.cpp" />
     <ClCompile Include="..\Src\Application\TextureRepository.cpp" />
     <ClCompile Include="..\Src\Application\TimerServiceImpl.cpp" />
     <ClCompile Include="..\Src\Application\BaseViewModel.cpp" />
@@ -230,6 +232,8 @@
     <ClInclude Include="..\Src\Application\RoutesView.h" />
     <ClInclude Include="..\Src\Application\RoutesViewModel.h" />
     <ClInclude Include="..\Src\Application\SDKUtils.h" />
+    <ClInclude Include="..\Src\Application\StyleView.h" />
+    <ClInclude Include="..\Src\Application\StyleViewModel.h" />
     <ClInclude Include="..\Src\Application\TextureRepository.h" />
     <ClInclude Include="..\Src\Application\TimerServiceImpl.h" />
     <ClInclude Include="..\Src\Application\BaseViewModel.h" />

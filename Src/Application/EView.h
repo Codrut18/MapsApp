@@ -14,5 +14,6 @@ enum class EView
     Maps,
     Routes,
     Navigation,
-    Preferences
+    Preferences,
+    Styles
 };
