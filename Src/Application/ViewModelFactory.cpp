@@ -9,6 +9,7 @@
 #include "RoutesViewModel.h"
 #include "NavigationViewModel.h"
 #include "PreferencesViewModel.h"
+#include "StyleViewModel.h"
 
 ViewModelFactory::ViewModelFactory( IMapService* mapService, INavigationService* navigationService )
     : m_mapService( mapService )
@@ -25,6 +26,8 @@ IViewModel* ViewModelFactory::BuildViewModel( EView viewType, IViewModelListener
         return new MainViewModel( m_mapService, m_navigationService, listener );
     case EView::Maps:
         return new MapsViewModel( m_mapService, m_navigationService, listener );
+    case EView::Styles:
+        return new StyleViewModel( m_mapService, m_navigationService, listener );
     case EView::Routes:
         return new RoutesViewModel( m_mapService, m_navigationService, listener );
     case EView::Navigation:

@@ -7,6 +7,7 @@
 #include "RoutesView.h"
 #include "NavigationView.h"
 #include "PreferencesView.h"
+#include "StyleView.h"
 
 ViewFactory::ViewFactory( IMainWindow& mainWindow ) 
     : m_mainWindow( mainWindow )
@@ -22,6 +23,8 @@ IView* ViewFactory::BuildView( EView viewType )
         return new MainView( &m_mainWindow );
     case EView::Maps:
         return new MapsView( &m_mainWindow );
+    case EView::Styles:
+        return new StyleView(&m_mainWindow);
     case EView::Routes:
         return new RoutesView( &m_mainWindow );
     case EView::Navigation:

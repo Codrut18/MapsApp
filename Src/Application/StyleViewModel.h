@@ -11,6 +11,8 @@ public:
 
     void UpdateMenuItems();
 
+    void SetStyleId(LargeInteger id);
+
     IResourceRepository* GetResourceRepository();
     ITextureRepository* GetTextureRepository();
 };

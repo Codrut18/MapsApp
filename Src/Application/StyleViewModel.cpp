@@ -32,6 +32,16 @@ void StyleViewModel::UpdateMenuItems()
         });
 }
 
+void StyleViewModel::SetStyleId(LargeInteger id)
+{
+    m_action = [&, id]() {
+        m_mapView->SetMapStyleById(id, true); 
+        m_navigationService->GoToView(EView::Main);
+
+    };
+    
+}
+
 IResourceRepository* StyleViewModel::GetResourceRepository()
 {
     return GetMapService()->GetResourceRepository();

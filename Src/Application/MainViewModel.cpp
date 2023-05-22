@@ -19,6 +19,7 @@ void MainViewModel::OnMapServiceEvent( EMapServiceEvent event )
 void MainViewModel::UpdateMenuItems()
 {
     auto func1 = [&]() { m_navigationService->GoToView( EView::Maps ); };
+    auto func6 = [&]() { m_navigationService->GoToView( EView::Styles ); };
     auto func25 = [&]() { m_navigationService->GoToView( EView::Routes ); };
     auto func3 = [&]() { m_navigationService->GoToView( EView::Preferences ); };
     auto func4 = [&]() { m_mapService->SetAllowConnection( !GetMapService()->IsConnected() ); };
@@ -30,6 +31,7 @@ void MainViewModel::UpdateMenuItems()
         { "Routes", func25 },
         { "Preferences", func3 },
         { connectStr, func4 },
-        { "Exit", func5 }
+        { "Exit", func5 },
+        {"Styles", func6},
         } );
 }

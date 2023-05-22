@@ -42,15 +42,15 @@ void StyleView::Render()
     auto resourceRepository = m_viewModel->GetResourceRepository();
     auto textureRepository = m_viewModel->GetTextureRepository();
 
-    m_parentWindow->BeginView("Maps_View");
+    m_parentWindow->BeginView("Styles_View");
 
-    if (!resourceRepository->IsResourceAvailable(EResourceType::Map))
+    if (!resourceRepository->IsResourceAvailable(EResourceType::Style))
     {
-        m_parentWindow->LoadingWindow("Loading maps", ImGuiColor_Green, ImGuiColor_Black);
+        m_parentWindow->LoadingWindow("Loading styles", ImGuiColor_Green, ImGuiColor_Black);
     }
     else
     {
-        gem::ContentStoreItemList contentStoreItems = resourceRepository->GetMaps();
+        gem::ContentStoreItemList contentStoreItems = resourceRepository->GetStyles();
 
         ImGui::SetNextWindowBgAlpha(0.8f);
 
@@ -58,94 +58,109 @@ void StyleView::Render()
         ImGui::PushStyleVar(ImGuiStyleVar_ScrollbarSize, SCROLL_BAR_SIZE);
 
         static const char* contentStoreFilter[5] = { "All", "Downloaded", "Not downloaded", "In progress", "Paused" };
-        m_parentWindow->Combo("##filtermapscombo", contentStoreFilter, IM_ARRAYSIZE(contentStoreFilter), m_mapFilterIndex, []() {});
+        m_parentWindow->Combo("##filterstylescombo", contentStoreFilter, IM_ARRAYSIZE(contentStoreFilter), m_mapFilterIndex, []() {});
 
-        if (ImGui::BeginTable("##table_maps", 3, ImGuiTableFlags_ScrollY))
+        if (ImGui::BeginTable("##table_styles", 3, ImGuiTableFlags_ScrollY))
         {
+            const ImVec2 STYLE_IMAGE_SIZE(DPI(100), DPI(50));
+
             static float COLUMN2_SIZE = 0;
             if (COLUMN2_SIZE < 0.1)
-                COLUMN2_SIZE = ImGui::CalcTextSize("888.88 MB").x;
+                COLUMN2_SIZE = ImGui::CalcTextSize("386.96 KB").x;
 
-            const float COLUMN0_SIZE = DPI(30);
+            const float COLUMN0_SIZE = STYLE_IMAGE_SIZE.x;
             const float COLUMN1_SIZE = ImGui::GetWindowWidth() - COLUMN0_SIZE - COLUMN2_SIZE - SCROLL_BAR_SIZE - DPI(20);
 
-            ImGui::TableSetupScrollFreeze(0, 1); // Make top row always visible
-            ImGui::TableSetupColumn("##Code", ImGuiTableColumnFlags_WidthFixed, COLUMN0_SIZE);
-            ImGui::TableSetupColumn("Country", ImGuiTableColumnFlags_WidthFixed, COLUMN1_SIZE);
+            ImGui::TableSetupScrollFreeze(0, 1); // Make top row always visible 
+            ImGui::TableSetupColumn("Preview", ImGuiTableColumnFlags_WidthFixed, COLUMN0_SIZE);
+            ImGui::TableSetupColumn("Style", ImGuiTableColumnFlags_WidthFixed, COLUMN1_SIZE);
             ImGui::TableSetupColumn("Size", ImGuiTableColumnFlags_WidthFixed, COLUMN2_SIZE);
 
             ImGui::TableHeadersRow();
 
-            for (auto item : contentStoreItems)
+            if (!contentStoreItems.empty())
             {
-                auto itemState = resourceRepository->GetItemState(item);
+                int itemIndex = 0;
 
-                if (m_mapFilterIndex != 0 && m_mapFilterIndex != (int)itemState)
-                    continue;
-
-                gem::String itemName = item.getName();
-                itemName.fallbackToLegacyUnicode(); // needed to fix some Romanian legacy unicodes
-
-                if (itemState == EItemState::Paused)
-                    itemName = gem::String::formatString(u"[PAUSED %d%%] %s", item.getDownloadProgress(), itemName);
-
-                if (itemState == EItemState::InProgress)
-                    itemName = gem::String::formatString(u"[%02d%%] %s", item.getDownloadProgress(), itemName);
-
-                ImGui::TableNextRow();
-
-                ImGui::TableSetColumnIndex(0);
-
-                const ImVec2 COUNTRY_ICON_SIZE(DPI(20), DPI(20));
-                gem::String countryCode = item.getCountryCodes()[0];
-                unsigned int textureId = textureRepository->GetTexture(resourceRepository->GetFlagImage(countryCode), COUNTRY_ICON_SIZE.x, COUNTRY_ICON_SIZE.y);
-                ImGui::Image((void*)textureId, COUNTRY_ICON_SIZE);
-
-                ImGui::TableSetColumnIndex(1);
-
-                switch (itemState)
+                for (auto item : contentStoreItems)
                 {
-                case EItemState::Unavailable:
-                case EItemState::Paused:
-                {
-                    ImGui::PushStyleColor(ImGuiCol_Button, ImGuiColor_Black);
-                    ImGui::BeginDisabled(!m_viewModel->IsConnected() && itemState == EItemState::Paused);
+                    auto itemState = resourceRepository->GetItemState(item);
 
-                    if (ImGui::Button(itemName.toStdString().c_str()))
-                        resourceRepository->DownloadAsync(item);
+                    if (m_mapFilterIndex != 0 && m_mapFilterIndex != (int)itemState)
+                        continue;
 
-                    ImGui::EndDisabled();
-                    ImGui::PopStyleColor();
-                    break;
+                    gem::String itemName = item.getName();
+                    if (itemState == EItemState::Paused)
+                        itemName = gem::String::formatString(u"%s %s", "[PAUSED]", itemName);
+                    if (itemState == EItemState::InProgress)
+                        itemName = gem::String::formatString(u"[%02d%%] %s", item.getDownloadProgress(), item.getName());
+
+                    ImGui::TableNextRow();
+
+                    ImGui::TableSetColumnIndex(0);
+
+                    if (item.isImagePreviewAvailable())
+                    {
+                        auto textureId = textureRepository->GetTexture(item.getImagePreview(), STYLE_IMAGE_SIZE.x, STYLE_IMAGE_SIZE.y, false);
+                        if (textureId != -1)
+                            ImGui::Image((void*)textureId, STYLE_IMAGE_SIZE);
+                    }
+
+                    ImGui::TableSetColumnIndex(1);
+
+                    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + (STYLE_IMAGE_SIZE.y - ImGui::GetFontSize()) / 2);
+
+                    switch (itemState)
+                    {
+                    case EItemState::Unavailable:
+                    case EItemState::Paused:
+                    {
+                        ImGui::PushStyleColor(ImGuiCol_Button, ImGuiColor_Black);
+                        ImGui::BeginDisabled(!m_viewModel->IsConnected() && itemState == EItemState::Paused);
+
+                        if (ImGui::Button(itemName.toStdString().c_str()))
+                            resourceRepository->DownloadAsync(item);
+
+                        ImGui::EndDisabled();
+                        ImGui::PopStyleColor();
+                        break;
+                    }
+                    case EItemState::Completed:
+                    {
+                        ImGui::PushStyleColor(ImGuiCol_Button, ImGuiColor_Black);
+                        ImGui::PushStyleColor(ImGuiCol_Text, ImGuiColor_Green);
+
+                        if (ImGui::Button(itemName.toStdString().c_str()))
+                        {
+                            m_viewModel->SetStyleId(item.getId());
+                            
+                        }
+
+                        ImGui::PopStyleColor();
+                        ImGui::PopStyleColor();
+                        break;
+                    }
+                    case EItemState::InProgress:
+                    {
+                        ImGui::PushStyleColor(ImGuiCol_Button, ImGuiColor_Black);
+                        ImGui::BeginDisabled(true);
+
+                        ImGui::Button(itemName.toStdString().c_str());
+
+                        ImGui::EndDisabled();
+                        ImGui::PopStyleColor();
+                        break;
+                    }
+                    }
+
+                    ImGui::TableSetColumnIndex(2);
+
+                    ImGui::SetCursorPosY(ImGui::GetCursorPosY() + (STYLE_IMAGE_SIZE.y - ImGui::GetFontSize()) / 2);
+
+                    ImGui::TextUnformatted(FormatFileSize(item.getTotalSize()).toStdString().c_str());
+
+                    itemIndex++;
                 }
-                case EItemState::Completed:
-                {
-                    ImGui::PushStyleColor(ImGuiCol_Button, ImGuiColor_Black);
-                    ImGui::PushStyleColor(ImGuiCol_Text, ImGuiColor_Green);
-                    ImGui::BeginDisabled(true);
-
-                    ImGui::Button(itemName.toStdString().c_str());
-
-                    ImGui::EndDisabled();
-                    ImGui::PopStyleColor();
-                    ImGui::PopStyleColor();
-                    break;
-                }
-                case EItemState::InProgress:
-                {
-                    ImGui::PushStyleColor(ImGuiCol_Button, ImGuiColor_Black);
-
-                    if (ImGui::Button(itemName.toStdString().c_str()))
-                        item.pauseDownload();
-
-                    ImGui::PopStyleColor();
-                    break;
-                }
-                }
-
-                ImGui::TableSetColumnIndex(2);
-
-                ImGui::TextUnformatted(FormatFileSize(item.getTotalSize()).toStdString().c_str());
             }
 
             ImGui::EndTable();
